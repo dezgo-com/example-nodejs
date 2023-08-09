@@ -32,12 +32,11 @@ app.post('/api', upload.single('file'), (req, res) => {
     const options = {
       method: 'POST',
       headers: {
-        'X-RapidAPI-Key': 'API_KEY_HERE',
-        'X-RapidAPI-Host': 'dezgo.p.rapidapi.com',
+        'X-Dezgo-Key': 'API_KEY_HERE',
         ...formData.getHeaders()
       },
       data: buf,
-      url: 'https://dezgo.p.rapidapi.com/image2image',
+      url: 'https://api.dezgo.com/image2image',
       responseType: "arraybuffer"
     };
   
